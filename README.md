@@ -19,5 +19,6 @@ faceball1/
 ├── index.js                         
 ├── metro.config.js                
 ├── package.json                     
-├── yarn.lock                       
+├── yarn.lock
 
+backend:firebase/googel cloud
