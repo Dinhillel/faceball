@@ -1,27 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
-import { getDatabase, ref, get } from 'firebase/database';
+import { useDispatch, useSelector } from 'react-redux';
 import { firebase } from '@react-native-firebase/app';
+import firestore from '@react-native-firebase/firestore';
+import { setScores } from './src/redux/scoresSlice'; 
 
 const ScoreScreen = () => {
-  const [scores, setScores] = useState([]);
+  const dispatch = useDispatch();
+  const scores = useSelector(state => state.scores.scores); // Redux state
 
   useEffect(() => {
-    const db = getDatabase(firebase.app());
-    const scoresRef = ref(db, 'scores');
-    
-    get(scoresRef)
-      .then(snapshot => {
-        if (snapshot.exists()) {
-          setScores(Object.values(snapshot.val()));
+    const fetchScores = async () => {
+      try {
+        const scoresSnapshot = await firestore().collection('scores').get();
+        if (!scoresSnapshot.empty) {
+          const scoresList = scoresSnapshot.docs.map(doc => doc.data());
+          dispatch(setScores(scoresList)); //send the data-Redux
         } else {
           console.log('No data available');
         }
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, []);
+      } catch (error) {
+        console.error('Error fetching scores:', error);
+      }
+    };
+
+    fetchScores();
+  }, [dispatch]);
 
   return (
     <View style={styles.screenContainer}>

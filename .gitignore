@@ -21,12 +21,13 @@ DerivedData
 *.ipa
 *.xcuserstate
 **/.xcode.env.local
+# .env files
+ .env
 
 # Android/IntelliJ
 #
 build/
 .idea
-.gradle
 local.properties
 *.iml
 *.hprof
@@ -52,7 +53,6 @@ yarn-error.log
 **/fastlane/Preview.html
 **/fastlane/screenshots
 **/fastlane/test_output
-
 # Bundle artifact
 *.jsbundle
 
@@ -65,8 +65,7 @@ yarn-error.log
 
 # testing
 /coverage
-# envirment;
-.env
+# envirment;.env
 
 # Yarn
 .yarn/*
@@ -75,3 +74,9 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
