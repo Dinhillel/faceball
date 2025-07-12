@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, FlatList, ActivityIndicator, Text } from 'react-native';
-import { useTheme } from 'react-native-paper'; // ✅ זה הקו החשוב
+import { useTheme } from 'react-native-paper'; 
 import useHighlights from '../../hooks/useHighlights';
 import HighlightCard from '../../components/HighlightCard';
 import FullScreenVideo from '../../components/FullScreenVideo';
