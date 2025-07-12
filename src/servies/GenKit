@@ -1,0 +1,30 @@
+
+import { gemini15Flash, googleAI } from '@genkit-ai/googleai';
+import { genkit } from 'genkit';
+import dotenv from 'dotenv';
+
+
+dotenv.config();
+
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
+ // show of Ai
+const ai = genkit({
+  plugins: [
+    googleAI({
+      apiKey: GOOGLE_API_KEY, 
+    }),
+  ],
+  model: gemini15Flash,
+});
+
+//Ai function to create text wth GenKit model
+export const generateText = async (name) => {
+  try {
+    const { text } = await ai.generate(`Hello Gemini, my name is ${name}`);
+    console.log(text);
+    return text;
+  } catch (error) {
+    console.error('Error generating text:', error);
+    return null;
+  }
+};
