@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Build folders
+android/app/build/
+android/build/
+ios/build/
+
+# Local env files
+.env
+
+# Firebase config sensitive files
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+desktop.ini
+Thumbs.db
+
+# IDE config files (optional)
+.vscode/
+.idea/
+
+# Yarn lock or package-lock 
+# package-lock.json
+# iOS build folders
+ios/Pods/
+ios/Podfile.lock
+ios/DerivedData/
+ios/build/
