@@ -1,3 +1,7 @@
+src folder;  ui component, screen,and nevagtion. 
+functions folder - insex is a server taht fatch data  from api and save in firestore NOSQL Database. 
+
+
 React Native Sports App — Highlights • News • Live Scores
 A  React Native mobile app with three core screens: Highlights, News, and Live Scores — and more screen inside. 
 designed to deliver real-time sports content through a fast, scalable, and engaging experience.
@@ -34,6 +38,6 @@ News: Real-time sports articles and updates.
 
 Live Scores: Instant match scores with minimal latency.
 
-src folder;  ui component, screen,and nevagtion. 
-functions folder - insex is a server taht fatch data  from api and save in firestore NOSQL Database. 
+
+
 
