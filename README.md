@@ -1,3 +1,7 @@
+
+<img src="src/Assest/Logo.png" alt="Faceball Logo" width="400">
+
+
 src folder;  ui component, screen,and nevagtion. 
 functions folder - insex is a server taht fatch data  from api and save in firestore NOSQL Database. 
 
@@ -37,6 +41,7 @@ Highlights: Short video clips and key game moments.
 News: Real-time sports articles and updates.
 
 Live Scores: Instant match scores with minimal latency.
+
 
 
 
